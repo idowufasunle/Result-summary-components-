@@ -32,10 +32,6 @@
   color: hsl(228, 45%, 44%);
 }
 
-body {
-  background-color: var(--off-white);
-  font-size: 16px;
-}
 
 h1,
 h2,
@@ -47,6 +43,8 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--off-white);
+  font-size: 16px;
 
   min-height: calc(100dvh - 5rem);
 }
@@ -55,7 +53,8 @@ h3 {
   /* layout */
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 0;
 
   border-radius: 1.25rem;
 
@@ -74,7 +73,7 @@ h3 {
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  color: var(--white);
+  color: var(--off-white);
   border-radius: 1rem;
   padding: 1.5rem;
 
@@ -84,6 +83,7 @@ h3 {
 .card_result .title {
   padding: 1rem;
   font-weight: var(--medium);
+  color: var(--light-lavender);
 }
 
 .card_result .result_score {
@@ -108,6 +108,7 @@ h3 {
   padding-top: 0.625rem;
   font-size: 4.4rem;
   font-weight: var(--extra-bold);
+  color: var(--off-white);
 }
 .card_result .result_score .total {
   font-size: 1.25rem;
@@ -116,10 +117,12 @@ h3 {
 .card_result .detail_wrapper {
   text-align: center;
   max-height: 30%;
+  padding-inline: 1rem;
 }
 .card_result .detail_wrapper .message {
   font-size: 1.3rem;
   font-weight: 400;
+  color: var(--off-white);
 }
 .card_result .detail_wrapper .details {
   font-size: var(--bold);
@@ -243,7 +246,7 @@ h3 {
 
   border-radius: 2rem;
   background-color: var(--dark-gray-blue);
-  color: var(--white);
+  color: var(--off-white);
   text-align: center;
   font-weight: var(--extra-bold);
 }
@@ -252,3 +255,12 @@ h3 {
   background-color: var(--violet-blue);
   cursor: pointer;
 }
+
+@media (min-width: 475px) {
+  .card {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+}
+
+

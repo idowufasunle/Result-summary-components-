@@ -1,38 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Summary Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="/Result-summary-components-/style.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'off-white': 'hsl(221, 100%, 96%)',
+            'primary-white': 'hsl(0, 0%, 100%)',
+            'light-red': 'hsl(0, 100%, 67%)',
+            'green-teal': 'hsl(166, 100%, 37%)',
+            'cobalt-blue': 'hsl(234, 85%, 45%)',
+            'light-royal-blue': 'hsl(241, 81%, 54%)',
+            'violet-blue': 'hsla(256, 72%, 46%, 1)',
+            'persia-blue': 'hsla(241, 72%, 46%, 0)',
+            'light-lavender': 'hsl(241, 100%, 89%)',
+            'dark-grey-blue': 'hsl(224, 30%, 27%)',
+            'orange-yellow':'hsl(39, 100%, 56%)'
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="text-font" src="/assets/fonts/HankenGrotesk-VariableFont_wght.ttf" />
-
-  <link rel="text-font" src="/assets/fonts/static/HankenGrotesk-Medium.ttf" />
-  <link rel="text-font" src="/assets/fonts/static/HankenGrotesk-Bold.ttf" />
-  <link rel="text-font" src="assets/fonts/static/HankenGrotesk-ExtraBold.ttf" />
-  <title>Results Summary Component</title>
-  <link rel="stylesheet" href="style.css" />
+          },
+          fontFamily: {
+        display: ['"Hanken Grotesk"', 'sans-serif'], // Custom utility: font-display
+      }
+        }
+      }
+    }
+  </script>
 </head>
 
-<body class="root">
+<body class="font-display">
+  <div class="card_wrapper min-h-dvh flex bg-off-white">
 
-  <div class="card">
+  <div class="card flex flex-col sm:flex-row rounded-3xl bg-primary-white shadow-xl shadow-off-white m-auto">
 
-    <div class="card_result">
+    <div class=" card_result flex flex-col justify-around items-center bg-linear-to-t from-violet-blue/90 to-light-royal-blue text-off-white rounded-3xl p-8 ">
 
-      <h3 class="result_title">Your Result</h3>
-      <div class="result_score">
+      <h3 class="result_title font-bold text-2xl text-light-lavender">Your Result</h3>
+      <div class="result_score flex flex-col items-center justify-center rounded-full w-40 aspect-square bg-linear-to-t from-violet-blue/70 to-light-royal-blue hover:bg-cobalt-blue">
 
-        <span class="score">76</span>
-        <span class="total">of 100</span>
+        <h3 class="score text-7xl font-bold text-primary-white">76</h3>
+        <span class="total text-xl font-bold text-light-lavender p-4">of 100</span>
       </div>
 
-      <div class="detail_wrapper">
+      <div class="detail_wrapper  px-4">
 
-        <h3 class="message">
+        <h3 class="message text-center text-4xl font-bold mb-4">
           Great
         </h3>
 
-        <p class="details">
+        <p class="details font-bold opacity-75 text-light-lavender max-w-3xs text-center">
           You scored higher than 65% of the people who have taken these tests.
         </p>
 
@@ -42,13 +67,13 @@
 
     </div>
 
-    <div class="card_summary">
-      <h3 class="summary_title">Summary</h3>
+    <div class="card_summary p-4">
+      <h3 class="summary_title font-medium text-dark-gray-blue ml-4 mt-2 text-2xl">Summary</h3>
 
-      <div class="items_wrapper">
+      <div class="items_wrapper flex flex-col items-center gap-4 m-4 font-bold">
         <!-- Reaction -->
-        <div class="items reaction_item">
-          <div class="title_icon">
+        <div class="items reaction_item flex justify-stretch gap-20 p-4 rounded-lg bg-light-red/10 hover:bg-light-red/30">
+          <div class="title_icon text-light-red flex items-center gap-2">
             <div class="item_icon">
               <img src="assets/images/icon-reaction.svg" alt="reaction icon" padding="0.4rem" />
             </div>
@@ -56,59 +81,57 @@
           </div>
           <div class="item_texts">
             <span class="score_value">80</span>
-            <span class="total_score"> / 100</span>
+            <span class="total_score text-dark-grey-blue/50"> / 100</span>
             </span>
           </div>
         </div>
         
         <!-- Memory -->
-        <div class="items memory_item">
-          <div class="title_icon">
+        <div class="items memory_item flex justify-stretch gap-20 p-4 rounded-lg bg-orange-yellow/10 hover:bg-orange-yellow/30">
+          <div class="title_icon flex items-center gap-2 text-orange-yellow">
             <div class="memory-icon"><img src="assets/images/icon-memory.svg" padding="0.4rem"></div>
             <h3 class="memory_title">Memory</h3>
           </div>
           <div class="item_texts">
             <span class="score_value">92</span>
-            <span class="total_score"> / 100</span>
+            <span class="total_score text-dark-grey-blue/50"> / 100</span>
         
           </div>
         </div>
         
         <!-- Verbal -->
-        <div class="items verbal_item">
-          <div class="title_icon">
+        <div class="items verbal_item flex justify-stretch gap-20 px-6 py-4 rounded-lg bg-green-teal/10 hover:bg-green-teal/30">
+          <div class="title_icon flex items-center gap-2 text-green-teal">
             <div class="verbal-icon"><img src="assets/images/icon-verbal.svg" padding="0.4rem"></div>
             <h3 class="verbal_title">Verbal</h3>
           </div>
           <div class="item_texts">
             <span class="score_value">61</span>
-            <span class="total_score"> / 100</span>
+            <span class="total_score text-dark-grey-blue/50"> / 100</span>
           </div>
         </div>
         <!-- Visual -->
-        <div class="items visual_item">
-          <div class="title_icon">
+        <div class="items visual_item flex justify-stretch gap-20 px-6 py-4 rounded-lg bg-cobalt-blue/10 hover:bg-cobalt-blue/30">
+          <div class="title_icon flex items-center gap-2 text-cobalt-blue">
             <div class="visual-icon"><img src="assets/images/icon-visual.svg" padding="0.4rem"></div>
             <h3 class="visual_title">Visual</h3>
           </div>
           <div class="item_texts">
             <span class="score_value">73</span>
-            <span class="total_score"> / 100</span>
+            <span class="total_score text-dark-grey-blue/50"> / 100</span>
           </div>
         </div>
-      </div>
-
-
-      <button class="btn">Continue</button>
-
-
+         <button class="btn w-full py-3 rounded-3xl bg-dark-grey-blue text-off-white font-extrabold hover:bg-cobalt-blue">Continue</button>
     </div>
 
 
+     
+
+
+      </div>
+    </div>
+  </div>
+
+
 </body>
-
-
-</html>
-
-
 </html>

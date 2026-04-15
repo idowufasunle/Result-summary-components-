@@ -38,10 +38,10 @@
 </head>
 
 <body class="font-display">
-  <div class="card_wrapper min-h-dvh flex bg-off-white">
+  <div class="card_wrapper min-h-dvh flex bg-off-white p-4">
 
-  <div class="card flex flex-col sm:flex-row rounded-3xl bg-primary-white shadow-xl shadow-off-white m-auto">
-    <div class=" card_result flex flex-col justify-around items-center bg-linear-to-t from-violet-blue/90 to-light-royal-blue text-off-white rounded-3xl p-12">
+  <div class="card flex flex-col sm:flex-row rounded-3xl bg-primary-white shadow-xl shadow-off-white w-full max-w-3xl md:m-auto">
+    <div class="card_result flex flex-col justify-around items-center bg-linear-to-t from-violet-blue/90 to-light-royal-blue text-off-white rounded-3xl flex-1 p-4">
 
       <h3 class="result_title font-bold text-2xl text-light-lavender">Your Result</h3>
       <div class="result_score flex flex-col items-center justify-center rounded-full w-40 aspect-square bg-linear-to-t from-violet-blue/70 to-light-royal-blue hover:bg-cobalt-blue">
@@ -66,13 +66,13 @@
 
     </div>
 
-    <div class="card_summary p-4">
+    <div class="card_summary p-4 flex-1">
      
 
       <div class="items_wrapper flex flex-col gap-4 m-4 font-bold">
          <h3 class="summary_title font-medium text-dark-gray-blue mt-2 text-2xl">Summary</h3>
         <!-- Reaction -->
-        <div class="items reaction_item flex justify-stretch gap-20 p-4 rounded-lg bg-light-red/10 hover:bg-light-red/30">
+        <div class="items reaction_item flex justify-between gap-20 p-4 rounded-lg bg-light-red/10 hover:bg-light-red/30">
           <div class="title_icon text-light-red flex items-center gap-2">
             <div class="item_icon">
               <img src="assets/images/icon-reaction.svg" alt="reaction icon" padding="0.4rem" />
@@ -87,7 +87,7 @@
         </div>
         
         <!-- Memory -->
-        <div class="items memory_item flex justify-stretch gap-20 p-4 rounded-lg bg-orange-yellow/10 hover:bg-orange-yellow/30">
+        <div class="items memory_item flex justify-between gap-20 p-4 rounded-lg bg-orange-yellow/10 hover:bg-orange-yellow/30">
           <div class="title_icon flex items-center gap-2 text-orange-yellow">
             <div class="memory-icon"><img src="assets/images/icon-memory.svg" padding="0.4rem"></div>
             <h3 class="memory_title">Memory</h3>
@@ -100,7 +100,7 @@
         </div>
         
         <!-- Verbal -->
-        <div class="items verbal_item flex justify-stretch gap-20 px-6 py-4 rounded-lg bg-green-teal/10 hover:bg-green-teal/30">
+        <div class="items verbal_item flex justify-between gap-20 px-6 py-4 rounded-lg bg-green-teal/10 hover:bg-green-teal/30">
           <div class="title_icon flex items-center gap-2 text-green-teal">
             <div class="verbal-icon"><img src="assets/images/icon-verbal.svg" padding="0.4rem"></div>
             <h3 class="verbal_title">Verbal</h3>
@@ -111,7 +111,7 @@
           </div>
         </div>
         <!-- Visual -->
-        <div class="items visual_item flex justify-stretch gap-20 px-6 py-4 rounded-lg bg-cobalt-blue/10 hover:bg-cobalt-blue/30">
+        <div class="items visual_item flex justify-between gap-20 px-6 py-4 rounded-lg bg-cobalt-blue/10 hover:bg-cobalt-blue/30">
           <div class="title_icon flex items-center gap-2 text-cobalt-blue">
             <div class="visual-icon"><img src="assets/images/icon-visual.svg" padding="0.4rem"></div>
             <h3 class="visual_title">Visual</h3>
@@ -121,7 +121,7 @@
             <span class="total_score text-dark-grey-blue/50"> / 100</span>
           </div>
         </div>
-         <button class="btn w-full py-3 rounded-3xl bg-dark-grey-blue text-off-white font-extrabold hover:bg-cobalt-blue">Continue</button>
+         <button class="btn text-xl py-4 rounded-3xl bg-dark-grey-blue text-off-white font-extrabold hover:bg-cobalt-blue">Continue</button>
     </div>
 
 
